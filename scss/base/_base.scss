@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+legend {
+  text-transform: uppercase;
+}
+
+::placeholder {
+  opacity: 0.6;
+}

@@ -1,0 +1,128 @@
+%header-center-element {
+  display: inline-block;
+  height: $header-element-height;
+  margin: auto 0;
+}
+
+%chart {
+  width: 100%;
+  padding: 10px;
+}
+
+%div-border {
+  border-bottom: solid 2px #dcdcdc;
+}
+
+%icon-circular {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+%stat-card {
+  margin: 20px;
+  border: solid 1px $color-stat-card-border;
+  border-radius: 5px;
+  height: 100px;
+  background-color: $color-stat-card-background;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  .stat-icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    padding: 5%;
+    background-color: $color-stat-icon-background;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    background-position: center center;
+    border-radius: 50%;
+  }
+  .stat {
+    display: inline-block;
+    padding: 0 5%;
+  }
+  .stat-label {
+    margin: 0;
+    font-size: 1.3rem;
+    color: $color-stat-icon-background;
+  }
+  .stat-number {
+    display: inline-block;
+    font-size: 2rem;
+  }
+}
+
+%new-member-card {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 80px;
+  padding: 5%;
+  .user-icon {
+    @extend %icon-circular;
+  }
+  .new-user-info {
+    padding-left: 10px;
+  }
+  .username {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .user-email {
+    font-size: 0.8rem;
+    color: $color-stat-icon-background;
+  }
+  .date {
+    margin-left: auto;
+  }
+}
+
+%activity-card {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 80px;
+  padding: 5%;
+  background-image: url('../icons/right-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: auto 30%;
+  background-position: center right 5px;
+  .user-icon {
+    @extend %icon-circular;
+  }
+  .user-activity {
+    padding-left: 10px;
+    max-width: 80%;
+  }
+  .activity {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .time {
+    font-size: 0.8rem;
+  }
+}
+
+%text-input {
+  font-size: 0.9rem;
+  display: block;
+  width: 100%;
+  background-color: $color-message-user-input;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px $color-search-border;
+  padding: 8px 15px;
+}
+
+%clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

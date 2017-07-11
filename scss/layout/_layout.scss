@@ -1,0 +1,16 @@
+.widget-heading {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.traffic-div,
+.daily-traffic-div,
+.mobile-users-div,
+.social-stats-div,
+.new-members-div,
+.recent-activity-div,
+.message-user-div,
+.settings-div {
+  @extend %div-border;
+}
