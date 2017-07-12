@@ -105,3 +105,7 @@ $('.close-button').on('click', () => {
     }, 500);
   });
 });
+
+$('.alert-icon img').click((e) => {
+  $('.notifications').toggle();
+});

@@ -10,7 +10,7 @@
 }
 
 %div-border {
-  border-bottom: solid 2px #dcdcdc;
+  border-bottom: solid 2px $color-div-border;
 }
 
 %icon-circular {
@@ -38,6 +38,7 @@
     background-size: 60% 60%;
     background-position: center center;
     border-radius: 50%;
+
   }
   .stat {
     display: inline-block;
@@ -51,6 +52,14 @@
   .stat-number {
     display: inline-block;
     font-size: 2rem;
+  }
+  @media #{$br-medium} {
+    padding: 3%;
+    margin: auto;
+    transform: scale(0.8);
+  }
+  @media #{$br-large} {
+    transform: scale(0.9);
   }
 }
 
@@ -78,6 +87,14 @@
   .date {
     margin-left: auto;
   }
+  @media #{$br-medium} {
+    padding: 0;
+    margin: 15px;
+    border-bottom: solid 1px $color-div-border;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 
 %activity-card {
@@ -104,6 +121,14 @@
   }
   .time {
     font-size: 0.8rem;
+  }
+  @media #{$br-medium} {
+    padding: 0;
+    margin: 15px;
+    border-bottom: solid 1px $color-div-border;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 

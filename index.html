@@ -15,11 +15,18 @@
       <div class="alert-icon">
         <img src="icons/icon-bell.svg" alt="alert icon">
         <div class='notification-dot'></div>
+        <div class='notifications'>
+          <ul>
+            <li>New Signup</li>
+            <li>Business Contact</li>
+          </ul>
+        </div>
       </div>
+
       <img src="https://placeimg.com/100/100/people" alt="user icon" class='header-user-icon'>
       <span class='header-user-name'>Josh Sullivan</span>
     </header>
-    <main>
+    <main class='main-view'>
       <nav class='main-nav'>
         <ul class='nav-ul'>
           <li class='nav-li'><img src="icons/icon-dashboard.svg" alt="dashboard icon"></li>
@@ -28,126 +35,134 @@
           <li class='nav-li'><img src="icons/icon-settings.svg" alt="settings icon"></li>
         </ul>
       </nav>
-      <div class="dashboard-header-div">
-        <h1 class='dashboard-heading'>Dashboard</h1>
-        <input type="search" name="search" value="" placeholder="Search" class='dashboard-search'>
-      </div>
-      <div class="traffic-div">
-        <p class='alert'>
-          <span>Alert</span>
-          <span>Click the cross icon to close it.</span>
-          <img src="icons/cross.svg" alt="close button" class='close-button'>
-        </p>
-        <h1 class='widget-heading'>Traffic</h1>
-        <ul class='traffic-ul'>
-          <li class='traffic-li'>Hourly</li>
-          <li class='traffic-li'>Daily</li>
-          <li class='traffic-li'>Weekly</li>
-          <li class='traffic-li'>Monthly</li>
-        </ul>
-        <canvas id="traffic-chart" class='traffic-chart'></canvas>
-        <!-- <img src="" alt="traffic chart"> -->
-      </div>
-      <div class="daily-traffic-div">
-        <h1 class='widget-heading'>Daily Traffic</h1>
-        <canvas id="daily-traffic-chart" class="daily-traffic-chart"></canvas>
-      </div>
-      <div class="mobile-users-div">
-        <h1 class='widget-heading'>Mobile Users</h1>
-        <canvas id="mobile-users-chart" class="mobile-users-chart"></canvas>
-      </div>
-      <div class="social-stats-div">
-        <h1 class='widget-heading'>Social Stats</h1>
-        <ul class='social-stats-ul'>
-          <li class='twitter-stats'>
-            <div class='stat-icon twitter-icon'></div>
-            <div class="stat">
-              <h2 class='stat-label'>Twitter</h2>
-              <span class='stat-number'>10,345</span>
-            </div>
-          </li>
-          <li class='facebook-stats'>
-            <div class='stat-icon facebook-icon'></div>
-            <div class="stat">
-              <h2 class='stat-label'>Facebook</h2>
-              <span class='stat-number'>8,739</span>
-            </div>
-          </li>
-          <li class='google-plut-stats'>
-            <div class='stat-icon google-plus-icon'></div>
-            <div class="stat">
-              <h2 class='stat-label'>Google+</h2>
-              <span class='stat-number'>2,530</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="new-members-div">
-        <h1 class='widget-heading'>New Members</h1>
-        <ul class='new-members-ul'>
-          <!-- <li>
-            <img src="https://placeimg.com/100/100/people" alt="user icon" class='user-icon'>
-            <div class="new-user-info">
-              <h2 class='username'>Victoria Chambers</h2>
-              <span class='user-email'>victoria.chambers80@example.com</span>
-            </div>
-            <span class='date'>10/15/15</span>
-          </li> -->
-        </ul>
-      </div>
-      <div class="recent-activity-div">
-        <h1 class='widget-heading'>Recent Activity</h1>
-        <ul class='recent-activity-ul'>
-          <!-- <li>
-            <img src="https://placeimg.com/100/100/people" alt="user icon" class='user-icon'>
-            <div class="user-activity">
-              <p class='activity'>Victoria Chambers commented on YourApp's SEO Tips</p>
-              <span class='time'>4 hours ago</span>
-            </div>
-          </li> -->
-        </ul>
-      </div>
-      <div class="message-user-div">
-        <form class="message-user-form" action="" method="post">
-          <fieldset>
-            <legend class='message-user-legend'>Message User</legend>
-            <input type="text" name="user" value="" placeholder="Search for User" class='search-user'>
-            <textarea name="message" placeholder="Message for User" class='message-user'></textarea>
-            <input type="submit" name="" value="SEND" class='send-button'>
-          </fieldset>
-        </form>
-      </div>
-      <div class="settings-div">
-        <form class="settings-form" action="" method="post">
-          <fieldset>
-            <legend class='settings-legend'>Settings</legend>
-            <label class="switch-light switch-ios setting-input" onclick="">
-              <input type="checkbox">
-              <strong class='switch-label'>Send Email Notifications</strong><!--
-           --><span class='switch'>
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-            </label>
-            <label class="switch-light switch-ios setting-input" onclick="">
-              <input type="checkbox">
-              <strong class='switch-label'>Set Profile To Public</strong><!--
-           --><span class='switch'>
-                <span>Off</span>
-                <span>On</span>
-                <a></a>
-              </span>
-            </label>
-            <select class="timezone-select" name="timezone" required>
-              <option value="" disabled selected hidden>Select Timezone</option>
-              <option value="Pacific">Pacific</option>
-              <option value="India">India</option>
-            </select>
-            <input type="submit" name="" value="SAVE" class='save-button'><!--
-         --><input type="reset" name="" value="CANCEL" class='cancel-button'>
-          </fieldset>
-        </form>
+      <div class='content'>
+        <div class="dashboard-header-div">
+          <h1 class='dashboard-heading'>Dashboard</h1>
+          <div class='search-bar'><input type="search" name="search" value="" placeholder="Search" class='dashboard-search'></div>
+        </div>
+        <div class="traffic-div">
+          <p class='alert'>
+            <span>Alert</span>
+            <span>Click the cross icon to close it.</span>
+            <img src="icons/cross.svg" alt="close button" class='close-button'>
+          </p>
+          <div class='traffic-bar'>
+            <h1 class='widget-heading'>Traffic</h1>
+            <ul class='traffic-ul'>
+              <li class='traffic-li'>Hourly</li>
+              <li class='traffic-li'>Daily</li>
+              <li class='traffic-li'>Weekly</li>
+              <li class='traffic-li'>Monthly</li>
+            </ul>
+          </div>
+          <canvas id="traffic-chart" class='traffic-chart'></canvas>
+          <!-- <img src="" alt="traffic chart"> -->
+        </div>
+        <div class="daily-traffic-div">
+          <h1 class='widget-heading'>Daily Traffic</h1>
+          <canvas id="daily-traffic-chart" class="daily-traffic-chart"></canvas>
+        </div>
+        <div class="mobile-users-div">
+          <h1 class='widget-heading'>Mobile Users</h1>
+          <canvas id="mobile-users-chart" class="mobile-users-chart"></canvas>
+        </div>
+        <div class="social-stats-div">
+          <h1 class='widget-heading'>Social Stats</h1>
+          <ul class='social-stats-ul'>
+            <li class='twitter-stats'>
+              <div class='stat-icon twitter-icon'></div>
+              <div class="stat">
+                <h2 class='stat-label'>Twitter</h2>
+                <span class='stat-number'>10,345</span>
+              </div>
+            </li>
+            <li class='facebook-stats'>
+              <div class='stat-icon facebook-icon'></div>
+              <div class="stat">
+                <h2 class='stat-label'>Facebook</h2>
+                <span class='stat-number'>8,739</span>
+              </div>
+            </li>
+            <li class='google-plut-stats'>
+              <div class='stat-icon google-plus-icon'></div>
+              <div class="stat">
+                <h2 class='stat-label'>Google+</h2>
+                <span class='stat-number'>2,530</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="new-members-div">
+          <h1 class='widget-heading'>New Members</h1>
+          <ul class='new-members-ul'>
+            <!-- <li>
+              <img src="https://placeimg.com/100/100/people" alt="user icon" class='user-icon'>
+              <div class="new-user-info">
+                <h2 class='username'>Victoria Chambers</h2>
+                <span class='user-email'>victoria.chambers80@example.com</span>
+              </div>
+              <span class='date'>10/15/15</span>
+            </li> -->
+          </ul>
+        </div>
+        <div class="recent-activity-div">
+          <h1 class='widget-heading'>Recent Activity</h1>
+          <ul class='recent-activity-ul'>
+            <!-- <li>
+              <img src="https://placeimg.com/100/100/people" alt="user icon" class='user-icon'>
+              <div class="user-activity">
+                <p class='activity'>Victoria Chambers commented on YourApp's SEO Tips</p>
+                <span class='time'>4 hours ago</span>
+              </div>
+            </li> -->
+          </ul>
+        </div>
+        <div class="message-user-div">
+          <form class="message-user-form" action="" method="post">
+            <fieldset>
+              <legend class='message-user-legend'>Message User</legend>
+              <input type="text" name="user" value="" placeholder="Search for User" class='search-user'>
+              <textarea name="message" placeholder="Message for User" class='message-user'></textarea>
+              <input type="submit" name="" value="SEND" class='send-button'>
+            </fieldset>
+          </form>
+        </div>
+        <div class="settings-div">
+          <form class="settings-form" action="" method="post">
+            <fieldset>
+              <legend class='settings-legend'>Settings</legend>
+              <label class="switch-light switch-ios setting-input" onclick="">
+                <input type="checkbox">
+                <strong class='switch-label'>Send Email Notifications</strong><!--
+             --><span class='switch'>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+              <label class="switch-light switch-ios setting-input" onclick="">
+                <input type="checkbox">
+                <strong class='switch-label'>Set Profile To Public</strong><!--
+             --><span class='switch'>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+              </label>
+              <select class="timezone-select" name="timezone" required>
+                <option value="" disabled selected hidden>Select Timezone</option>
+                <option value="Pacific">Hawaii–Aleutian Time Zone</option>
+                <option value="Pacific">Alaska Time Zone</option>
+                <option value="Pacific">Pacific Time Zone</option>
+                <option value="Pacific">Mountain Time Zone</option>
+                <option value="India">Central Time Zone</option>
+                <option value="India">Eastern Time Zone</option>
+              </select>
+              <input type="submit" name="" value="SAVE" class='save-button'><!--
+           --><input type="reset" name="" value="CANCEL" class='cancel-button'>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </main>
     <footer></footer>

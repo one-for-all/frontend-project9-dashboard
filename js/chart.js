@@ -13,7 +13,7 @@ let trafficChart = new Chart(trafficCtx, {
             lineTension: 0,
             pointBackgroundColor: 'white',
             pointBorderWidth: 2,
-            data: [0, 200, 1000, 500, 200, 2000, 3000, 4500, 2500, 3300],
+            data: [500, 900, 1000, 500, 1200, 2000, 1100, 2200, 2500, 1800],
             fill: 'start',
             backgroundColor: 'rgba(227, 225, 247, .5)'
         }]
@@ -28,14 +28,19 @@ let trafficChart = new Chart(trafficCtx, {
            ticks: {
             //  labelOffset: -20,
            },
-          //  gridLines: {
-           //
-          //  }
-         }]
+         }],
+         yAxes: [{
+            ticks: {
+                max: 3000,
+                min: 500,
+                stepSize: 500
+            }
+        }],
+
        },
        animation: {
          duration: 0
-       }
+       },
     }
 });
 
@@ -76,7 +81,7 @@ let mobileChart = new Chart(mobileCtx, {
               '#64b4c1',
               '#786fc1'
             ],
-            borderWidth: [0, 0, 0]
+            borderWidth: [0, 0, 0],
         }],
     },
     // Configuration options go here
@@ -84,10 +89,16 @@ let mobileChart = new Chart(mobileCtx, {
       cutoutPercentage: 55,
       rotation: -0.55*Math.PI,
       legend: {
-        display: true
+        display: true,
+        position: 'right',
+        labels : {
+          fontSize: 40,
+        }
       },
       animation: {
         animateRotate: false
-      }
-    }
+      },
+      responsive: false,
+      maintainAspectRatio: true,
+    },
 });

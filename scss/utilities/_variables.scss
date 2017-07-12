@@ -17,7 +17,13 @@ $color-submit-button: $main-color;
 $color-canecel-button: #b2b2b2;
 $color-noti-dot: #60e680;
 $color-alert: $main-color;
+$color-nav-border: #6ae988;
+$color-div-border: #dcdcdc;
 
 $header-height: 70px;
 $header-element-height: $header-height*0.6;
 $height-main-nav: 70px;
+
+// Media query breakpoints
+$br-medium: '(min-width: 768px)';
+$br-large: '(min-width: 1024px)';
